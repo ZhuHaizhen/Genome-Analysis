@@ -5,6 +5,8 @@
 
 # Protocol: RS_HGAP_Assembly.2
 
+su zhuhz
+
 # merge subreads
 
 cat /home/zhuhz/results/zhuhz/C01_1-K1W22B-7/Analysis_Results/*.subreads.fasta > /home/zhuhz/results/zhuhz/genome/K1W22B-7/raw_reads.fasta
