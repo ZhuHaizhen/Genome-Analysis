@@ -11,4 +11,4 @@ cat /home/zhuhz/results/zhuhz/C01_1-K1W22B-7/Analysis_Results/*.subreads.fasta >
 
 # FinisherSC
 
-python /home/ibm/Software/finishingTool/finisherSC.py -par 4 -o contigs.fasta_improved3.fasta /home/zhuhz/results/zhuhz/genome/K1W22B-7 /home/ibm/Software/finishingTool/MUMmer3.23 /home/zhuhz/results/zhuhz/genome/K1W22B-7
+python /home/ibm/Software/finishingTool/finisherSC.py -par 4 -o contigs.fasta_improved3.fasta /home/zhuhz/results/zhuhz/genome/K1W22B-7 /home/ibm/Software/finishingTool/MUMmer3.23
