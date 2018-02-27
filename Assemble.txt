@@ -49,3 +49,6 @@ busco -i /home/zhuhz/results/zhuhz/genome/K1W22B-7/improved3.fasta -o K1W22B-7_B
 
 source activate python3.5
 
+
+
+source deactivate
