@@ -51,4 +51,10 @@ source activate python3.5
 
 circlator all /home/zhuhz/results/zhuhz/genome/K1W22B-7/improved3.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W22B-7_data_corrected.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W22B-7 --threads 4 --data_type pacbio-corrected
 
+circlator all /home/zhuhz/results/zhuhz/genome/K1W11S-77/contitgs.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W11S-77_data_corrected.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W11S-77.O --threads 4 --data_type pacbio-corrected
+
+circlator all /home/zhuhz/results/zhuhz/genome/K1W11S-77/contigs.fasta /home/zhuhz/results/zhuhz/genome/K1W11S-77/raw_reads.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W11S-77.R --threads 4 --data_type pacbio-raw
+
+
+
 source deactivate
