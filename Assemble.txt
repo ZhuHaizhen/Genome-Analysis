@@ -45,10 +45,10 @@ busco -i /home/zhuhz/results/zhuhz/genome/K1W22B-7/improved3.fasta -o K1W22B-7_B
 
 
 
-# circulation by circlator
+# circularization by circlator
 
 source activate python3.5
 
-
+circlator all /home/zhuhz/results/zhuhz/genome/K1W22B-7/improved3.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W22B-7_data_corrected.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W22B-7 --threads 4 --data_type pacbio-corrected
 
 source deactivate
