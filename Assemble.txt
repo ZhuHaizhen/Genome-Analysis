@@ -55,6 +55,12 @@ circlator all /home/zhuhz/results/zhuhz/genome/K1W11S-77/contitgs.fasta /home/zh
 
 circlator all /home/zhuhz/results/zhuhz/genome/K1W11S-77/contigs.fasta /home/zhuhz/results/zhuhz/genome/K1W11S-77/raw_reads.fasta /home/zhuhz/results/zhuhz/genome/circlator/K1W11S-77.R --threads 4 --data_type pacbio-raw
 
-
-
 source deactivate
+
+
+
+
+# polish by pilon
+
+samtools sort K2W31S-8_aligned_reads.bam K2W31S-8.sorted.bam
+
