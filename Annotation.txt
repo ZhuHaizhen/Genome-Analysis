@@ -1,0 +1,21 @@
+cd /data/zhuhz/genome/glimmer/K1W22B-7
+
+long-orfs -n -t 1.15 /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.longorfs
+
+/usr/bin/glimmer extract -t /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.longorfs > K1W22B-7.train
+
+/usr/bin/glimmer build-icm -r K1W22B-7.icm < K1W22B-7.train
+
+glimmer3 -o50 -g110 -t30 /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.icm K1W22B-7.run1
+
+tail -n +2 K1W22B-7.run1.predict > K1W22B-7.coords
+
+/usr/share/glimmer3/scripts/upstream-coords.awk 25 0 K1W22B-7.coords | /usr/bin/glimmer extract /data/zhuhz/genome/K1W22B-7/improved3.fasta - > K1W22B-7.upstream
+
+/home/zhuhz/results/zhuhz/software/ELPH/sources/elph K1W22B-7.upstream LEN=6 | /usr/share/glimmer3/scripts/get-motif-counts.awk > K1W22B-7.motif
+
+/usr/lib/glimmer3/start-codon-distrib -3 /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.coords
+
+glimmer3 -o50 -g110 -t30 -b K1W22B-7.motif -P 0.759,0.178,0.063 /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.icm K1W22B-7
+
+/usr/bin/glimmer extract /data/zhuhz/genome/K1W22B-7/improved3.fasta K1W22B-7.predict > K1W22B-7.predict.fasta
